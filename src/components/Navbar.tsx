@@ -126,7 +126,7 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
             </button>
 
             <a
-              href="/itinerary"
+              href="/Karunaada_Habba_Complete_Package.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackGAEvent("click_nav_itinerary_pdf", "engagement", "Navbar")}
@@ -191,7 +191,7 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
               {lang === "en" ? "BUY PASSES" : "ಪಾಸ್‌ಗಳನ್ನು ಖರೀದಿಸಿ"}
             </button>
             <a
-              href="/itinerary"
+              href="/Karunaada_Habba_Complete_Package.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {

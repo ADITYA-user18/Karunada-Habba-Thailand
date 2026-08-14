@@ -283,7 +283,7 @@ export default function TripHighlights({ lang }: TripHighlightsProps) {
             </div>
 
             <a
-              href="/itinerary"
+              href="/Karunaada_Habba_Complete_Package.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackGAEvent("download_full_itinerary_pdf", "engagement", "Itinerary Section")}

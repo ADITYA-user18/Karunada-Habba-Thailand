@@ -79,7 +79,7 @@ export default function Footer({ onOpenAdmin, lang }: FooterProps) {
               </li>
               <li>
                 <a
-                  href="/itinerary"
+                  href="/Karunaada_Habba_Complete_Package.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackGAEvent("click_footer_itinerary_pdf", "engagement", "Footer")}
