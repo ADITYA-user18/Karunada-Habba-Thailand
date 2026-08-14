@@ -94,7 +94,7 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
                 {lang === "en" ? "THAILAND 2026 WITH" : "ಥೈಲ್ಯಾಂಡ್ 2026"}
               </span>
             </div>
-            <PowerTVLogo className="h-5.5 sm:h-6 md:h-6.5 shrink-0 mt-0.5" />
+            <PowerTVLogo className="h-5 sm:h-6 shrink-0 mt-0.5" />
           </div>
 
           {/* Desktop Links */}

@@ -62,7 +62,7 @@ export default function Hero({ lang }: HeroProps) {
           </div>
 
           {/* Kannada Title */}
-          <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.25] mb-4 tracking-normal text-white animate-[fade-in-up_1s_ease-out_0.4s_both] overflow-visible">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.25] mb-4 tracking-normal text-white animate-[fade-in-up_1s_ease-out_0.4s_both] overflow-visible">
             <span className="block mb-1">ಥೈಲ್ಯಾಂಡ್ನಲ್ಲಿ</span>
             <span
               className="block overflow-visible py-1"
