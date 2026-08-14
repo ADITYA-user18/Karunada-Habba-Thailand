@@ -19,7 +19,7 @@ export default function Hero({ lang }: HeroProps) {
   const tagsToRender = lang === "en" ? englishTags : kannadaTags;
 
   return (
-    <section className="relative min-h-[100svh] w-full overflow-hidden bg-brand-black-deep pt-[120px] md:pt-[140px] pb-16">
+    <section id="hero" className="relative min-h-[100svh] w-full overflow-hidden bg-brand-black-deep pt-[105px] sm:pt-[120px] lg:pt-[130px] pb-12 sm:pb-16 lg:pb-20">
       {/* ── Cinematic Background ── */}
       <div className="absolute inset-0 z-0 select-none">
         <img
@@ -148,7 +148,7 @@ export default function Hero({ lang }: HeroProps) {
         </div>
 
         {/* ── RIGHT: Registration Form ── */}
-        <div className="w-full lg:w-[420px] xl:w-[460px] shrink-0 flex items-center justify-center lg:justify-end animate-[fade-in-up_1s_ease-out_0.5s_both]">
+        <div id="request-invite" className="w-full lg:w-[420px] xl:w-[460px] shrink-0 flex items-center justify-center lg:justify-end animate-[fade-in-up_1s_ease-out_0.5s_both] scroll-mt-28">
           <div className="w-full max-w-[460px]">
             <HeroRegistrationForm lang={lang} />
           </div>

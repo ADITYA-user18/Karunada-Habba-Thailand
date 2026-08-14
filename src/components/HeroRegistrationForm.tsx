@@ -128,13 +128,13 @@ export default function HeroRegistrationForm({ lang }: HeroRegistrationFormProps
           }}
         />
 
-        <div className="relative z-10 p-6 sm:p-7">
+        <div className="relative z-10 p-5 sm:p-7">
           {/* Header */}
-          <div className="mb-5">
+          <div className="mb-4 sm:mb-5">
             <span className="text-[10px] font-mono font-black tracking-[0.25em] text-[#d4af37]/60 uppercase block mb-1">
               {lang === "en" ? "Karnataka | Habba Registration Request" : "ಕರ್ನಾಟಕ | ಹಬ್ಬ ನೋಂದಣಿ"}
             </span>
-            <h3 className="text-lg font-display font-bold text-white leading-tight">
+            <h3 className="text-base sm:text-lg font-display font-bold text-white leading-tight">
               {lang === "en" ? (
                 <>
                   Register Your{" "}
@@ -172,7 +172,7 @@ export default function HeroRegistrationForm({ lang }: HeroRegistrationFormProps
           </div>
 
           {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-transparent via-[#d4af37]/15 to-transparent mb-5" />
+          <div className="h-px bg-gradient-to-r from-transparent via-[#d4af37]/15 to-transparent mb-4 sm:mb-5" />
 
           {/* Error */}
           {error && (
@@ -182,7 +182,7 @@ export default function HeroRegistrationForm({ lang }: HeroRegistrationFormProps
           )}
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-3.5">
+          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-3.5">
             {/* Full Name */}
             <div>
               <label className={labelBase}>

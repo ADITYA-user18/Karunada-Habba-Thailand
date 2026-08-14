@@ -6,7 +6,7 @@ import Intro from "./components/Intro";
 import Experience from "./components/Experience";
 import Destination from "./components/Destination";
 import BrandMoment from "./components/BrandMoment";
-import Form from "./components/Form";
+
 import RazorpayCheckout from "./components/RazorpayCheckout";
 import Footer from "./components/Footer";
 import AdminConsole from "./components/AdminConsole";
@@ -56,8 +56,6 @@ export default function App() {
         {/* Official Festival Passes & Razorpay Checkout */}
         <RazorpayCheckout lang={lang} />
 
-        {/* Verification RSVP Form Section */}
-        <Form lang={lang} />
       </main>
 
       {/* Standard Footers */}
