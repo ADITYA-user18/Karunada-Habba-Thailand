@@ -53,9 +53,6 @@ export default function App() {
         {/* Emotional Heritage Anthem Highlight */}
         <BrandMoment lang={lang} />
 
-        {/* Official Festival Passes & Razorpay Checkout */}
-        <RazorpayCheckout lang={lang} />
-
       </main>
 
       {/* Standard Footers */}
