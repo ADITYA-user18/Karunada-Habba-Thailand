@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
 import { Music, Eye, Sparkles, Utensils, Users, ChevronLeft, ChevronRight, ExternalLink, Play, Disc } from "lucide-react";
 import { ExperienceCard } from "../types";
-import raghuDixitStagePhoto from "../assets/images/raghu_dixit_stage_1786169724422.jpg";
+import raghuNewPhoto from "../assets/images/raghu_new.png";
 
-const RAGHU_DIXIT_PHOTO_URL = raghuDixitStagePhoto;
+const RAGHU_DIXIT_PHOTO_URL = raghuNewPhoto;
 
 interface ExperienceProps {
   lang: "en" | "kn";
