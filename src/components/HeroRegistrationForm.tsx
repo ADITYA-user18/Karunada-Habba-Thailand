@@ -7,13 +7,14 @@ import { CheckCircle2, Loader2, ArrowRight, User, Phone, Mail, MapPin, Users } f
 const GOOGLE_FORM_ACTION =
   "https://docs.google.com/forms/d/e/1FAIpQLSfXeJkWMg9VyVYTB_GZVLQDozDc2MHbFlX6YpJvGOGNKYzrCg/formResponse";
 
-// Field entry IDs from the Google Form (inspect the form source to find these)
+// Real entry IDs extracted from the Google Form's FB_PUBLIC_LOAD_DATA_ blob
 const ENTRY = {
-  fullName: "entry.2005620554",
-  email: "entry.1045781291",
-  phone: "entry.1166974658",
-  city: "entry.839337160",
-  guests: "entry.1719280610",
+  fullName: "entry.932654998",
+  email: "entry.758588725",
+  phone: "entry.1707967939",
+  city: "entry.15804647",
+  guests: "entry.658655071",
+  profession: "entry.988576457",
 };
 
 interface HeroRegistrationFormProps {
@@ -25,7 +26,7 @@ export default function HeroRegistrationForm({ lang }: HeroRegistrationFormProps
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
-  const [guests, setGuests] = useState("1");
+  const [guests, setGuests] = useState("1 Guest");
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -53,6 +54,7 @@ export default function HeroRegistrationForm({ lang }: HeroRegistrationFormProps
       formData.append(ENTRY.phone, phone.trim());
       formData.append(ENTRY.city, city.trim());
       formData.append(ENTRY.guests, guests);
+      formData.append(ENTRY.profession, "Individual");
 
       // Use fetch with no-cors mode — response will be opaque but form will be submitted
       await fetch(GOOGLE_FORM_ACTION, {
@@ -283,11 +285,11 @@ export default function HeroRegistrationForm({ lang }: HeroRegistrationFormProps
                   }
                   style={{ background: "rgba(14,10,4,0.9)" }}
                 >
-                  <option value="1">1 Person</option>
-                  <option value="2">2 Persons</option>
-                  <option value="3">3 Persons</option>
-                  <option value="4">4 Persons</option>
-                  <option value="5+">5+ Persons</option>
+                  <option value="1 Guest">1 Person</option>
+                  <option value="2 Guests">2 Persons</option>
+                  <option value="3 Guests">3 Persons</option>
+                  <option value="4 Guests">4 Persons</option>
+                  <option value="5 Plus Guests">5+ Persons</option>
                 </select>
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[#d4af37]/40">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">

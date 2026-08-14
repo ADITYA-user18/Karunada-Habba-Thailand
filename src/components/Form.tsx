@@ -10,13 +10,14 @@ interface FormProps {
 const GOOGLE_FORM_ACTION =
   "https://docs.google.com/forms/d/e/1FAIpQLSfXeJkWMg9VyVYTB_GZVLQDozDc2MHbFlX6YpJvGOGNKYzrCg/formResponse";
 
+// Real entry IDs from Google Form FB_PUBLIC_LOAD_DATA_
 const ENTRY = {
-  fullName: "entry.2005620554",
-  email: "entry.1045781291",
-  phone: "entry.1166974658",
-  city: "entry.839337160",
-  guests: "entry.1719280610",
-  packageType: "entry.1065046570",
+  fullName: "entry.932654998",
+  email: "entry.758588725",
+  phone: "entry.1707967939",
+  city: "entry.15804647",
+  guests: "entry.658655071",
+  profession: "entry.988576457",
 };
 
 export default function Form({ lang }: FormProps) {
@@ -24,8 +25,8 @@ export default function Form({ lang }: FormProps) {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
-  const [guests, setGuests] = useState("1");
-  const [packageType, setPackageType] = useState("Individual");
+  const [guests, setGuests] = useState("1 Guest");
+  const [profession, setProfession] = useState("Salaried");
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -51,7 +52,7 @@ export default function Form({ lang }: FormProps) {
       formData.append(ENTRY.phone, phone.trim());
       formData.append(ENTRY.city, city.trim());
       formData.append(ENTRY.guests, guests);
-      formData.append(ENTRY.packageType, packageType);
+      formData.append(ENTRY.profession, profession);
 
       await fetch(GOOGLE_FORM_ACTION, {
         method: "POST",
@@ -264,11 +265,11 @@ export default function Form({ lang }: FormProps) {
                         className={inputBase + " pl-10 appearance-none cursor-pointer"}
                         style={{ background: "rgba(12,8,4,0.95)" }}
                       >
-                        <option value="1">1 Person</option>
-                        <option value="2">2 Persons</option>
-                        <option value="3">3 Persons</option>
-                        <option value="4">4 Persons</option>
-                        <option value="5+">5+ Persons</option>
+                        <option value="1 Guest">1 Guest</option>
+                        <option value="2 Guests">2 Guests</option>
+                        <option value="3 Guests">3 Guests</option>
+                        <option value="4 Guests">4 Guests</option>
+                        <option value="5 Plus Guests">5+ Guests</option>
                       </select>
                       <span className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-[#d4af37]/35">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -279,19 +280,18 @@ export default function Form({ lang }: FormProps) {
                   </div>
                   <div>
                     <label className={labelBase}>
-                      {lang === "en" ? "Package Type" : "ಪ್ಯಾಕೇಜ್ ವಿಧ"}
+                      {lang === "en" ? "Profession" : "ವೃತ್ತಿ"}
                     </label>
                     <div className="relative">
                       <select
-                        id="form-package"
-                        value={packageType}
-                        onChange={(e) => setPackageType(e.target.value)}
+                        id="form-profession"
+                        value={profession}
+                        onChange={(e) => setProfession(e.target.value)}
                         className={inputBase + " appearance-none cursor-pointer"}
                         style={{ background: "rgba(12,8,4,0.95)" }}
                       >
-                        <option value="Individual">Solo / Individual</option>
-                        <option value="Couple">2 Friends / Couple</option>
-                        <option value="Group">3+ Group / Family</option>
+                        <option value="Salaried">Salaried</option>
+                        <option value="Business">Business</option>
                       </select>
                       <span className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-[#d4af37]/35">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
