@@ -15,6 +15,7 @@ const ENTRY = {
   city: "entry.15804647",
   guests: "entry.658655071",
   profession: "entry.988576457",
+  consent: "entry.353672509",
 };
 
 interface HeroRegistrationFormProps {
@@ -54,7 +55,12 @@ export default function HeroRegistrationForm({ lang }: HeroRegistrationFormProps
       formData.append(ENTRY.phone, phone.trim());
       formData.append(ENTRY.city, city.trim());
       formData.append(ENTRY.guests, guests);
-      formData.append(ENTRY.profession, "Individual");
+      
+      // Google form fails silently if an invalid dropdown option is sent. "Salaried" is valid.
+      formData.append(ENTRY.profession, "Salaried");
+      
+      // Consent is a checkbox that might be required
+      formData.append(ENTRY.consent, "I agree to receive event updates. Invitations are not guaranteed entry until confirmed.");
 
       // Use fetch with no-cors mode — response will be opaque but form will be submitted
       await fetch(GOOGLE_FORM_ACTION, {
