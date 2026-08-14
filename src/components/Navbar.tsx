@@ -77,7 +77,7 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
         className={`fixed top-9 left-0 w-full z-40 transition-all duration-500 ${
           isScrolled
             ? "py-3 glass-panel-heavy border-b border-white/5 shadow-2xl"
-            : "py-6 bg-transparent"
+            : "py-3 lg:py-6 bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">

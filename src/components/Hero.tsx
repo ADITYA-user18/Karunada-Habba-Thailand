@@ -19,7 +19,7 @@ export default function Hero({ lang }: HeroProps) {
   const tagsToRender = lang === "en" ? englishTags : kannadaTags;
 
   return (
-    <section id="hero" className="relative min-h-[100svh] w-full overflow-hidden bg-brand-black-deep pt-[105px] sm:pt-[120px] lg:pt-[130px] pb-12 sm:pb-16 lg:pb-20">
+    <section id="hero" className="relative min-h-[100svh] w-full overflow-hidden bg-brand-black-deep pt-[150px] sm:pt-[140px] lg:pt-[150px] pb-12 sm:pb-16 lg:pb-20">
       {/* ── Cinematic Background ── */}
       <div className="absolute inset-0 z-0 select-none">
         <img
@@ -52,9 +52,9 @@ export default function Hero({ lang }: HeroProps) {
         <div className="flex-1 flex flex-col items-start justify-center text-left w-full max-w-2xl lg:max-w-none">
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-brand-burgundy/80 border border-brand-red/30 mb-6 shadow-[0_0_20px_rgba(155,27,27,0.35)] animate-[fade-in-up_1s_ease-out_0.2s_both]">
-            <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-ping" />
-            <span className="text-[10px] sm:text-xs font-mono font-black tracking-[0.18em] text-[#d4af37] uppercase">
+          <div className="inline-flex items-center gap-2.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-brand-burgundy/80 border border-brand-red/30 mb-6 shadow-[0_0_20px_rgba(155,27,27,0.35)] animate-[fade-in-up_1s_ease-out_0.2s_both]">
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#d4af37] animate-ping shrink-0" />
+            <span className="text-[8px] xs:text-[9px] sm:text-xs font-mono font-black tracking-widest sm:tracking-[0.18em] text-[#d4af37] uppercase leading-tight text-center sm:text-left">
               {lang === "en"
                 ? "World's Biggest Karnataka Rajyotsava Celebration Outside India"
                 : "ಭಾರತದ ಹೊರಗೆ ವಿಶ್ವದ ಅತಿ ದೊಡ್ಡ ಕರ್ನಾಟಕ ರಾಜ್ಯೋತ್ಸವ ಆಚರಣೆ"}
