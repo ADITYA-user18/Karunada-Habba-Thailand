@@ -1,0 +1,6 @@
+{
+  "name": "Karunada Habba Thailand",
+  "description": "Premium pre-launch teaser and invitation-request website for Karunada Habba Thailand — a global celebration of Karnataka's music, culture, cinema, food, and community.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
