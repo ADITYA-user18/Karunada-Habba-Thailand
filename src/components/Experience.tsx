@@ -161,7 +161,9 @@ export default function Experience({ lang }: ExperienceProps) {
                   alt={exp.title}
                   referrerPolicy="no-referrer"
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110 filter brightness-[0.6] group-hover:brightness-[0.5]"
+                  className={`w-full h-full transition-transform duration-[1.5s] ease-out group-hover:scale-110 filter brightness-[0.6] group-hover:brightness-[0.5] ${
+                    exp.id === "live-music" ? "object-cover object-right md:object-[80%_50%]" : "object-cover object-center"
+                  }`}
                 />
                 {/* Visual Card Gradients */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black-deep via-brand-black-deep/50 to-transparent z-1" />
